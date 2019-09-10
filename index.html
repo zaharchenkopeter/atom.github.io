@@ -40,20 +40,18 @@ style="width:80px; height:15px; border:0;" alt="Яндекс.Метрика" tit
 <!-- /Yandex.Metrika counter -->
 
 
-$file = 'https://avatars.mds.yandex.net/get-pdb/225396/2ee537b1-af31-43b5-971c-6c88fca0c92c/s1200';
- 
-if (file_exists($file)) {
-    header('Content-Description: File Transfer');
-    header('Content-Type: application/octet-stream');
-    header('Content-Disposition: attachment; filename='.basename($file));
-    header('Expires: 0');
-    header('Cache-Control: must-revalidate');
-    header('Pragma: public');
-    header('Content-Length: ' . filesize($file));
-    readfile($file);
-    exit;
+<div onload="download()"></div>
+<a id="dl" style="display: none" 
+    href="http://www.miniclip.com/games/base-jumping/en/base_jumping_miniclip.swf" 
+    download>Download</a>
+
+<script>
+function download(){
+   document.getElementById('dl').click();
 }
- 
+</script>
+
+
 </body>
 </html>
 
